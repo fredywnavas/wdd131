@@ -7,7 +7,7 @@ nav ul{
     display: flex;
     list-style: none;
     justify-content: center;
-    background-color: #333;
+    background-color: none;
     gap: 10%;
     padding: 0.5rem;
 }
@@ -33,7 +33,14 @@ body {
 
 h1 {
     grid-column: 1 / -1;
-    font-weight: auto;
+    font-weight: 900;
+    text-align: center;
+}
+
+header {
+    background-color: #295c9a;
+    color: white;
+    padding: 0.5rem;
     text-align: center;
 }
 
@@ -51,4 +58,11 @@ main {
 main img {
     width: 55%;
     height: auto;
+}
+
+footer {
+    background-color: #295c9a;
+    color: white;
+    text-align: center;
+    padding: 1rem;
 }
