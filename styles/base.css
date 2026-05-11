@@ -1,6 +1,15 @@
+
+
+
+
+/* F O N T S */
 body {
-    font-family: "Cormorant Garamond", serif;
-    font-weight: 400;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+}
+
+h1 {
+    font-weight: auto;
 }
 
 main {
@@ -13,8 +22,9 @@ main {
     padding: 1rem;
 }
 
-h1 {
-    font-weight: 200;
+main img {
+    width: 70%;
+    height: auto;
 }
 
 #course-title {
