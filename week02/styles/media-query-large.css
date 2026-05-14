@@ -1,0 +1,16 @@
+@media screen and (min-width: 500px) {
+    main {
+        max-width: auto;
+        margin: 0 auto;
+    }
+
+    header {
+        color: antiquewhite;
+        background-color: black;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
