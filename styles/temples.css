@@ -1,7 +1,14 @@
 header {
-    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color:  rgb(166, 245, 255);
+    padding: 1rem;
 }
 
+h1 {
+    margin: 0;
+}
 
 /* Google Fonts: Ubuntu Mono (I like monospace fonts) */
 
@@ -11,9 +18,8 @@ body {
 
 nav {
     display: none;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+    gap: 1rem;
+    flex-direction: column;
 }
 
 /*Styling the menu hover over with pointer*/
@@ -49,7 +55,8 @@ main {
 }
 
 figure {
-    margin: 0;
+    margin: auto;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 img {
@@ -63,4 +70,7 @@ h2 {
 
 footer {
     text-align: center;
+    color: rgb(69, 69, 69);
+    background-color: rgb(166, 245, 255);
+    padding: 1rem;
 }
