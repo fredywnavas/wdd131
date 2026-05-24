@@ -6,13 +6,14 @@ header {
 /* Google Fonts: Ubuntu Mono (I like monospace fonts) */
 
 body {
-    font-family: "Ubuntu Moono", monospace;
+    font-family: "Ubuntu Mono", monospace;
 }
 
 nav {
-    display: flex;
-    justify-content:first baseline;
+    display: none;
+    justify-content: center;
     align-items: center;
+    gap: 10px;
 }
 
 /*Styling the menu hover over with pointer*/
@@ -20,6 +21,10 @@ nav a {
     text-decoration: none;
     color: black;
     padding: 5px;
+}
+
+nav.open {
+    display: flex;
 }
 
 nav a:hover {
@@ -41,15 +46,6 @@ main {
     background: none;
     border: none;
     cursor: pointer;
-}
-
-nav {
-    display: none;
-    flex-direction: column;
-}
-
-nav.open {
-    display: flex;
 }
 
 figure {
