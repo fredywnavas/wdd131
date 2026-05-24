@@ -1,3 +1,7 @@
+header {
+    text-align: center;
+}
+
 
 /* Google Fonts: Ubuntu Mono (I like monospace fonts) */
 
@@ -7,7 +11,7 @@ body {
 
 nav {
     display: flex;
-    justify-content: space-evenly;
+    justify-content:first baseline;
     align-items: center;
 }
 
@@ -15,7 +19,7 @@ nav {
 nav a {
     text-decoration: none;
     color: black;
-    padding: 10px;
+    padding: 5px;
 }
 
 nav a:hover {
@@ -46,4 +50,21 @@ nav {
 
 nav.open {
     display: flex;
+}
+
+figure {
+    margin: 0;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+h2 {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
 }
