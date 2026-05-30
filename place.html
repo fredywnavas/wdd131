@@ -4,17 +4,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Place</title>
-    <meta name="description" content="This website has information about a place and its interesting facts.">
-
+    <title>Bay Area, California</title>
+    <meta name="description" content="This website has information about a place and its interesting facts and other data.">
     <link rel="stylesheet" href="styles/place.css">
-    <link rel="stylesheet" href="styles/place-large.css>
-    <script src=" scripts/place.js" defer></script>
-
+    <link rel="stylesheet" href="styles/place-large.css">
+    <script src="scripts/place.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
 </head>
 
 <body>
+    <haeder>
+        <h2>Bay Area, California.</h2>
+    </haeder>
 
+    <main>
+        <!--IMAGE SECTION-->
+        <section class="hero">
+            <picture>
+                <source media="(min-width: 768px)" srcset="images/bay-area-large.webp">
+                <img src="images/bay-area-small.webp" alt="Bay Area, California">
+            </picture>
+        </section>
+
+        <!--DATA SECTION-->
+        <section class="info">
+            <h2>Data</h2>
+            <p>Data of the Bay Area, California.</p>
+        </section>
+
+        <!--WEATHER SECTION-->
+        <section class="weather">
+            <h2>Weather 🌤️</h2>
+            <figure>
+                <!--mobile view-->
+                <img src="images/weather-icon.svg" alt="Weather icon">
+            </figure>
+            <p>Temperature: <span id="temperature"></span></p>
+            <p>Wind Speed: <span id="wind-speed"></span></p>
+            <p>Wind Chill: <span id="wind-chill"></span></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+        &copy; <span id="currentyear"></span> Fredy Navas, Bay Area, California.
+        </p>
+
+        <p id="lastModified">
+
+        </p>
+    </footer>
 </body>
-
 </html>
