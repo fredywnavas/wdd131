@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: var(--font-family);
+    font-family: "Ubuntu Mono", monospace;
 }
 
 /* Mobile view */
@@ -15,7 +15,7 @@ main {
 }
 
 header {
-    background-color: var(--primary-color);
+    background-color: rgb(22, 136, 202);;
     text-align: center;
     padding: 1rem;
 }
@@ -56,7 +56,7 @@ header h1 {
 }
 
 .data h2, .weather h2 {
-    background-color: var(--secondary-color);
+    background-color: rgb(154, 152, 29);;
     color: rgb(255, 255, 255);
     border-radius: 15px;
     padding: 0.5rem;
@@ -83,7 +83,7 @@ header h1 {
 
 .value {
     text-align: left;
-    padding-left: 0.5 rem;
+   /* padding-left: 0.5 rem; */
 }
 
 
