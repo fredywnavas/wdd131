@@ -1,3 +1,7 @@
+body {
+    font-family: "Ubuntu Mono", monospace;
+}
+
 /* Mobile view */
 main {
     display: flex;
@@ -9,8 +13,25 @@ img {
     display: block;
 }
 
+header {
+    background-color: rgb(22, 136, 202);
+    text-align: center;
+    padding: 1rem;
+}
+
+header h1 {
+    color: aliceblue;
+    margin: 0;
+}
+
 .hero {
   position: relative;
+}
+
+.hero img {
+    /*width: 100%;*/
+    display: block;
+    margin: auto;
 }
 
 .cards {
@@ -29,7 +50,7 @@ img {
 }
 
 .data h2, .weather h2 {
-    background-color: rgb(40, 117, 218);
+    background-color: rgb(154, 152, 29);
     color: aliceblue;
     border-radius: 15px;
     padding: 0.5rem;
@@ -40,13 +61,44 @@ img {
     padding: 0.5rem 1rem;
 }
 
+.weather img {
+    display: block;
+    margin: auto;
+}
+
+.weather .emoji {
+    display: none;
+}
+
+footer {
+    background-color: rgb(22, 136, 202);
+    text-align: center;
+    padding: 1rem;
+    color: #ffffff;
+}
+
+.copyright {
+    font-size: 2rem;
+}
+
+ /*
+  W I D E   V I E W
+ */
+
 @media (min-width: 768px) {
     .cards {
         position: absolute;
-        bottom: 20px;
-        left: 20px;
-        right: 20px;
+        bottom: 150px;
+        left: 150px;
+        right: 150px;
         flex-direction: row;
         justify-content: space-between;
-    }    
+    }
+
+    .weather img {
+        display: none;
+    }
+    .weather .emoji {
+        display: inline;
+    }
 }

@@ -10,12 +10,17 @@
     <link rel="stylesheet" href="styles/place-large.css">
     <script src="scripts/place.js" defer></script>
     <script src="scripts/getdates.js" defer></script>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <haeder>
-        <h2>Bay Area, California.</h2>
-    </haeder>
+    <header>
+        <h1>Bay Area, California.</h1>
+    </header>
 
     <main>
         <!--HERO IMAGE SECTION-->
@@ -34,13 +39,13 @@
 
                 <!--WEATHER SECTION-->
                 <section class="weather">
-                    <h2>Weather 🌤️</h2>
+                    <h2>Weather <span class="emoji">🌤️</span></h2>
                     <figure>
                         <!--mobile view-->
                         <img src="images/weather-icon.svg" alt="Weather icon">
                     </figure>
-                    <p>Temperature: <span id="temperature"></span></p>
-                    <p>Wind Speed: <span id="wind-speed"></span></p>
+                    <p>Temperature: <span id="temperature">55°F</span></p>
+                    <p>Wind Speed: <span id="wind-speed">10 mph</span></p>
                     <p>Wind Chill: <span id="wind-chill"></span></p>
                 </section>
             </div>
@@ -49,7 +54,7 @@
 
     <footer>
         <p>
-        &copy; <span id="currentyear"></span> Fredy Navas, Bay Area, California.
+        <span class="copyright">&copy;</span> <span id="currentyear"></span> Fredy Navas, Bay Area, California.
         </p>
 
         <p id="lastModified">
