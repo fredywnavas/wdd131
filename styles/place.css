@@ -1,1 +1,15 @@
 /* Mobile view */
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+@media (min-width: 768px) {
+    main {
+        flex-direction: row;
+    }
+}
