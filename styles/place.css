@@ -89,11 +89,6 @@ header h1 {
 
 /*Display emoji on wide view and svg icon on mobile*/
 
-.weather img {
-    display: block;
-    margin: auto;
-}
-
 .weather .emoji {
     display: none;
 }
