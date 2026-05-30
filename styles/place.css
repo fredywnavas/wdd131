@@ -103,25 +103,3 @@ footer {
 .copyright {
     font-size: 2rem;
 }
-
- /*
-  W I D E   V I E W
- */
-
-@media (min-width: 768px) {
-    .cards {
-        position: absolute;
-        bottom: 150px;
-        left: 150px;
-        right: 150px;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .weather img {
-        display: none;
-    }
-    .weather .emoji {
-        display: inline;
-    }
-}
