@@ -1,0 +1,76 @@
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color:  rgb(166, 245, 255);
+    padding: 1rem;
+}
+
+h1 {
+    margin: 0;
+}
+
+/* Google Fonts: Ubuntu Mono (I like monospace fonts) */
+
+body {
+    font-family: "Ubuntu Mono", monospace;
+}
+
+nav {
+    display: none;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+/*Styling the menu hover over with pointer*/
+nav a {
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+}
+
+nav.open {
+    display: flex;
+}
+
+nav a:hover {
+    color: white;
+    background-color: rgb(80, 128, 177);
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#menu-button {
+    display: block;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+figure {
+    margin: auto;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+h2 {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    color: rgb(69, 69, 69);
+    background-color: rgb(166, 245, 255);
+    padding: 1rem;
+}
