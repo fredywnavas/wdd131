@@ -2,7 +2,7 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color:  rgb(166, 245, 255);
+    background-color:  rgb(182, 251, 255);
     padding: 1rem;
 }
 
@@ -10,10 +10,10 @@ h1 {
     margin: 0;
 }
 
-/* Google Fonts: Ubuntu Mono (I like monospace fonts) */
+/* Google Fonts: Garamond serif */
 
 body {
-    font-family: "Ubuntu Mono", monospace;
+    font-family: "Elms Sans", sans-serif;
 }
 
 nav {
@@ -25,7 +25,7 @@ nav {
 /*Styling the menu hover over with pointer*/
 nav a {
     text-decoration: none;
-    color: black;
+    color: rgb(0, 0, 0);
     padding: 5px;
 }
 
@@ -34,8 +34,8 @@ nav.open {
 }
 
 nav a:hover {
-    color: white;
-    background-color: rgb(80, 128, 177);
+    color: rgb(255, 255, 255);
+    background-color: rgb(78, 139, 160);
 }
 
 main {
@@ -56,7 +56,7 @@ main {
 
 figure {
     margin: auto;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Elms Sans", sans-serif;
 }
 
 img {
@@ -70,7 +70,7 @@ h2 {
 
 footer {
     text-align: center;
-    color: rgb(69, 69, 69);
-    background-color: rgb(166, 245, 255);
+    color: rgb(0, 0, 0);
+    background-color: rgb(182, 251, 255);
     padding: 1rem;
 }
