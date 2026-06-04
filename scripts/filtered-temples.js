@@ -93,7 +93,7 @@ const temples = [
     "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/san-antonio-texas/400x250/san-antonio-temple-lds-274427-wallpaper.jpg"
   },
 ];
-
+/*
 const grid = document.getElementById('temple-grid');
 
 temples.forEach(t => {
@@ -111,4 +111,83 @@ temples.forEach(t => {
         </div>
         `;
         grid.appendChild(card);
+        
+});
+*/
+
+
+// Extract the year from the date.
+function getDedicatedYear(dedicated) {
+    return parseInt(dedicated.split(",")[0].trim());
+}
+
+// Builds a single card element from a temple object
+function createCard(t) {
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.innerHTML = `
+        <div class="card-img-wrap">
+            <img src="${t.imageUrl}" alt="${t.templeName} Temple" loading="lazy">
+        </div>
+        <div class="card-body">
+        <p class="card-name">${t.templeName}</p>
+        <div class="divider"></div>
+        <div class="meta-row"><i class="ti ti-map-pin" aria-hidden="true"></i>${t.location}</div>
+        <div class="meta-row"><i class="ti ti-calendar" aria-hidden="true"></i>Dedicated ${t.dedicated}</div>
+        <div class="area-badge"><i class="ti ti-ruler-2" aria hidden="true"></i>${t.area.toLocaleString()} sq ft</div>
+        </div>
+    `;
+    return card;
+}
+
+
+// CLEARS THE GRID, RENDERS ONLY TEMPLE IN THE PROVIDED ARRAY
+
+function displayTemples(filtered) {
+    const grid = document.getElementById('temple-grid');
+    grid.innerHTML = '';
+    filtered.forEach(t => grid.appendChild(createCard(t)));
+}
+
+
+// HOME: SHOWS ALL TEMPLES
+displayTemples(temples);
+
+
+// MENU FILTER LOGIC
+const navLinks = document.querySelectorAll("nav a");
+const heading = document.querySelector("h2");
+
+navLinks.forEach(link => {
+    link.addEventListener("click", (e) => {
+        e.preventDefault();
+        const filter = link.textContent.trim().toLowerCase();
+
+        // Update heading to match the active filter
+        heading.textContent = link.textContent.trim();
+
+        // Close mobile menu after selector selection
+        nav.classList.remove("open");
+        menuButton.textContent = "☰";
+
+        // Apply the correct filter
+        switch (filter) {
+            case "old":
+                displayTemples(temples.filter(t => getDedicatedYear(t.dedicated) < 1900));
+                break;
+            case "new":
+                displayTemples(temples.filter(t => getDedicatedYear(t.dedicated) > 2000));
+                break;
+            case "large":
+                displayTemples(temples.filter(t => t.area > 90000));
+                break;
+            case "small":
+                displayTemples(temples.filter(t => t.area < 10000));
+                break;
+            case "home":
+            default:
+                displayTemples(temples);
+                break;
+        }
+    });
 });
