@@ -34,3 +34,17 @@ products.forEach(product => {
     option.textContent = product.name;
     selectElement.appendChild(option);
 });
+
+const form = document.querySelector('form');
+
+form.addEventListener('submit', () => {
+    let reviewCount = localStorage.getItem('reivewCount');
+
+    if (reviewCount === null) {
+        reviewCount = 1;
+    } else {
+        reviewCount = Number(reviewCount) + 1;
+    }
+
+    localStorage.setItem('reviewCount', reviewCount);
+});
