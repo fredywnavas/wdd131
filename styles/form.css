@@ -91,3 +91,9 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: #974b08;
 }
+
+@media (min-width: 640px) {
+    form {
+        padding: 3rem;
+    }
+}
