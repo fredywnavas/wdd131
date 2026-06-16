@@ -10,6 +10,7 @@
         content="This website contains movies that are totally legal and free to watch online due to public domain and some are ad supported.">
 
     <link rel="stylesheet" href="styles/freeflicks.css">
+    <script src="scripts/freeflicks.js" defer></script>
     <script src="scripts/getdates.js" defer></script>
 
 
@@ -26,15 +27,40 @@
 
     <header>
         <a href="freeflicks.html">
-            <img src="images/logo-fm-yellow-small.png" alt="FreeFlicks logo">
+            <img src="images/ff-logo.png" alt="FreeFlicks logo">
         </a>
         <h1>FreeFlicks</h1>
-        <p class="tagline">Watch free classic movies for free (legally!).</p>
+        <p class="tagline">Watch classic movies totally free and legally!.</p>
+
+        <!--Navigation Menu-->
+        <button id="menu-button">☰</button>
+        <nav id="main-nav">
+            <a href="#" data-genre="home">Home</a>
+            <a href="#" data-genre="scifi">Sci-Fi</a>
+            <a href="#" data-genre="comedy">Comedy</a>
+            <a href="#" data-genre="drama">Drama</a>
+            <a href="#" data-genre="animation">Animation</a>
+            <a href="#" data-genre="english">English</a>
+            <a href="#" data-genre="spanish">Spanish</a>
+        </nav>
     </header>
 
     <main>
 
     </main>
+
+
+<!--EMBED MOVIES, PLAY ONLY WHEN CARD CLICKED-->
+    <div id="movie-modal" class="modal hidden">
+        <div class="modal-content">
+            <button id="close-modal">✕</button>
+            <div id="modal-player">
+            <!-- JS injects the video or iframe here when a card is clicked -->
+            </div>
+        </div>
+    </div>
+
+
 
     <footer>
         <p>
