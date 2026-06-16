@@ -129,8 +129,9 @@ const movies = [
         source: "https://en.wikipedia.org/wiki/File:Chuck_Jones_-_Merrie_Melodies_-_Fox_Pop_(1942)_(restored_HD_version)_(2).webm"
     },
     {
-        movieTitle: "The Wabbit Who Came Ti Supper",
+        movieTitle: "The Wabbit Who Came To Supper",
         genre: ["animation"],
+        year: 1942,
         language: "english",
         imageURL: "https://en.wikipedia.org/wiki/The_Wabbit_Who_Came_to_Supper#/media/File:Wabbitwhocametosupper.jpg",
         source: "https://www.youtube.com/watch?v=NmrBmzt0kvE"
@@ -160,7 +161,7 @@ const movies = [
         source: "https://en.wikipedia.org/wiki/File:To_Spring_(1936).webm"
     },
     {
-        ovieTitle: "Jerky Turkey",
+        movieTitle: "Jerky Turkey",
         genre: ["animation"],
         year: 1945,
         language: "english",
@@ -176,3 +177,32 @@ const movies = [
         source: "https://www.youtube.com/watch?v=n2LUJQgfhcI"
     },
 ];
+
+// FUNCTION TO DISPLAY THE CARDS
+function displayMovies(movieList) {
+    const grid = document.querySelector('#movie-grid');
+    grid.innerHTML = movieList.map(movie => `
+        <div class="movie-card" data-genre="${movie.genre.join(' ')}">
+            <img src="${movie.imageURL}" alt="${movie.movieTitle} poster" loading="lazy">
+            <h3>${movie.movieTitle}</h3>
+            <p>${movie.year || 'N/A'} · ${movie.genre.join(', ')}</p>
+        </div>
+    `).join('');
+}
+
+// CALL IT WHEN THE PAGE LOADS AND ON NAV CLICKS
+
+// Show all movies on load
+displayMovies(movies);
+
+// Filter on nav click
+document.querySelectorAll('#main-nav a').forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const genre = e.target.dataset.genre;
+        const filtered = genre === 'home'
+          ? movies
+          : movies.filter(movies => movie.genre.includes(genre));
+        displayMovies(filtered);
+    });
+});
