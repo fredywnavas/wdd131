@@ -1,5 +1,7 @@
+// DOM SELECTTORS AND EVENT LISTENERS
 const menuButton = document.querySelector("#menu-button");
 const nav = document.querySelector("nav");
+const themeToggle = document.querySelector('#theme-toggle');
 
 menuButton.addEventListener("click", () => {
     nav.classList.toggle("open");
@@ -8,6 +10,24 @@ menuButton.addEventListener("click", () => {
         menuButton.textContent = "X";
     } else {
         menuButton.textContent = "☰";
+    }
+});
+
+// Dark / Light Mode Theme TOGGLE. ##### localStorage
+if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark');
+    themeToggle.textContent = '☀️';
+}
+
+themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+
+    if (document.body.classList.contains('dark')) {
+        localStorage.setItem('theme', 'dark');
+        themeToggle.textContent = '☀️';
+    } else {
+        localStorage.setItem('theme', 'light');
+        themeToggle.textContent = '🌙';
     }
 });
 

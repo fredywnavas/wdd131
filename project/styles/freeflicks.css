@@ -1,5 +1,19 @@
-h1 {
+body {
     font-family: futura, sans-serif;
+    background-color: #ffffff;
+    color: #111111;
+}
+/*
+THEME TOGGLE, default is light mode, so this is to turn dark mode on.
+*/
+body.dark {
+    background-color: #111111;
+    color: #f1f1f1;
+}
+
+/*Hover over show in dark mode changed to light, kind of like a glow effect*/
+body.dark .movie-card:hover {
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.15);
 }
 
 /*
@@ -8,7 +22,7 @@ display grid instead of vertical list
 #movie-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 1rem;
+    gap: 2rem;
 }
 
 /*
@@ -17,7 +31,7 @@ each card to stack content inside
 .movie-card {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.2rem;
 }
 
 .movie-card img {
@@ -25,3 +39,26 @@ each card to stack content inside
     height: 300;
     object-fit: cover;
 }
+
+/*
+make the cards zoom in effect when hovering over with the mouse
+*/
+.movie-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+.movie-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/*
+FOOTER CONTENT
+*/
+footer {
+    text-align: center;
+    font-family: monospace;
+}
+
+
+
