@@ -1,3 +1,27 @@
 h1 {
     font-family: futura, sans-serif;
 }
+
+/*
+display grid instead of vertical list
+*/
+#movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+/*
+each card to stack content inside
+*/
+.movie-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.movie-card img {
+    width: 100%;
+    height: 300;
+    object-fit: cover;
+}

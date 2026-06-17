@@ -25,11 +25,19 @@ ARRAY OF MOVIES
 
 const movies = [
     {
+        movieTitle: "Mr. Bug Goes To Town",
+        genre: ["animation"],
+        year: 1941,
+        language: "english",
+        imageURL: "images/posters/1941-mr-bug-goes-to-town.webp",
+        source: "https://www.youtube.com/watch?v=z-1b_B96P1Y"
+    },
+    {
         movieTitle: "The Hitch-Hiker",
         genre: ["thriller"],
         year: 1953,
         language: "english",
-        imageURL: "https://en.wikipedia.org/wiki/The_Hitch-Hiker#/media/File:The_Hitch-Hiker_(1953_poster).jpeg",
+        imageURL: "images/posters/1953-the-hitch-hiker.webp",
         source: "https://tile.loc.gov/storage-services/service/mbrs/ntscrm/00047382/00047382.mp4"
     },
     {
@@ -37,7 +45,7 @@ const movies = [
         genre: ["scifi", "animation"],
         year: 1973,
         language: "english",
-        imageURL: "https://en.wikipedia.org/wiki/Fantastic_Planet#/media/File:Fantastic_Planet_film_poster.jpg",
+        imageURL: "images/posters/1973-fantastic-planet.webp",
         source: "https://archive.org/details/fantastic-planet__1973"
     },
     {
@@ -45,7 +53,7 @@ const movies = [
         genre: ["scifi", "horror"],
         year: 1964,
         language: "english",
-        imageURL: "https://en.wikipedia.org/wiki/The_Last_Man_on_Earth_(1964_film)#/media/File:Lastmanonearth1960s.jpg",
+        imageURL: "images/posters/1964-the-last-man-on-earth.webp",
         source: "https://archive.org/details/the-last-man-on-earth-1964-by-ubaldo-ragona-and-sidney-salkow"   
     },
     {
@@ -53,7 +61,7 @@ const movies = [
         genre: ["comedy", "romantic"],
         year: 1963,
         language: "english",
-        imageURL: "https://en.wikipedia.org/wiki/Charade_(1963_film)#/media/File:Charade_(1963_poster).jpg",
+        imageURL: "images/posters/1963-charade.webp",
         source: "https://en.wikipedia.org/wiki/File:Charade_(Stanley_Donen,_1963).webm"
     },
     {
@@ -61,7 +69,7 @@ const movies = [
         genre: ["comedy", "horror"],
         year: 1960,
         language: "english",
-        imageURL: "https://en.wikipedia.org/wiki/The_Little_Shop_of_Horrors#/media/File:LittleShop.jpg",
+        imageURL: "images/posters/1960-little-shop.webp",
         source: "https://commons.wikimedia.org/wiki/File:The_Little_Shop_of_Horrors_(1960)_by_Roger_Corman.webm"
     },
     {
@@ -69,7 +77,7 @@ const movies = [
         genre: ["scifi"],
         year: 1959,
         language: "english",
-        imageURL: "https://en.wikipedia.org/wiki/Teenagers_from_Outer_Space_(film)#/media/File:Teenagersouterspace.jpg",
+        imageURL: "images/posters/1959-teenagers-from-outer-space.webp",
         source: "https://archive.org/details/horror-sci-fi-thriller-movie-teenagers-from-outer-space-1959"
     },
     {
@@ -77,7 +85,7 @@ const movies = [
         genre: ["comedy", "fantasy"],
         year: 1952,
         language: "english",
-        imageURL: "https://en.wikipedia.org/wiki/Jack_and_the_Beanstalk_(1952_film)#/media/File:Jack_and_the_Beanstalk_(1952_film)_poster.jpg",
+        imageURL: "images/posters/1952-jack-and-the-beanstalk.webp",
         source: "https://en.wikipedia.org/wiki/File:Jack_and_the_Beanstalk_(1952).webm"
     },
     {
@@ -85,7 +93,7 @@ const movies = [
         genre: ["drama", "western"],
         year: 1951,
         language: "english",
-        imageURL: "https://en.wikipedia.org/wiki/Vengeance_Valley#/media/File:Vengeance_valley_poster.jpg",
+        imageURL: "images/posters/1951-vengeance-valley.webp",
         source: "https://www.youtube.com/watch?v=CAdygNgLGW0"
     },
     {
@@ -93,15 +101,23 @@ const movies = [
         genre: ["comedy", "adventure"],
         year: 1950,
         language: "english",
-        imageURL: "https://en.wikipedia.org/wiki/Cyrano_de_Bergerac_(1950_film)#/media/File:Cyrano_de_Bergerac_(1951_poster).jpg",
+        imageURL: "images/posters/1950-cyrano-de-bergerac.webp",
         source: "https://en.wikipedia.org/wiki/File:Cyrano_de_Bergerac_(1950).webm"
+    },
+    {
+        movieTitle: "Jerky Turkey",
+        genre: ["animation"],
+        year: 1945,
+        language: "english",
+        imageURL: "images/posters/1945-jerky-turkey.webp",
+        source: "https://www.youtube.com/watch?v=MJ_EDzA6yJk"
     },
     {
         movieTitle: "Pigs in a Polka",
         genre: ["animation"],
         year: 1943,
         language: "english",
-        imageURL: "https://en.wikipedia.org/wiki/Pigs_in_a_Polka#/media/File:Pigs_in_a_Polka_title_card.png",
+        imageURL: "images/posters/1943-pigs-in-a-polka.webp",
         source: "https://en.wikipedia.org/wiki/File:Pigs_in_a_Polka_LTGC.webm"
     },
     {
@@ -109,7 +125,7 @@ const movies = [
         genre: ["animation"],
         year: 1942,
         language: "english",
-        imageURL: "https://en.wikipedia.org/wiki/A_Tale_of_Two_Kitties#/media/File:A_Tale_of_Two_Kitties_(1942)_Title_Card.png",
+        imageURL: "images/posters/1942-a-tale-of-two-kitties.webp",
         source: "https://en.wikipedia.org/wiki/File:A_Tale_of_Two_Kitties_190612_LTPC.webm"
     },
     {
@@ -117,7 +133,7 @@ const movies = [
         genre: ["animation"],
         year: 1942,
         language: "english",
-        imageURL: "https://en.wikipedia.org/wiki/The_Dover_Boys_at_Pimento_University#/media/File:The_Dover_Boys_at_Pimento_University_-_title_card.png",
+        imageURL: "images/posters/1942-the-dover-boys-at-pimento-university.webp",
         source: "https://archive.org/details/the-dover-boys-at-pimento-university-1942-hd-blu-ray-remux"
     },
     {
@@ -125,7 +141,7 @@ const movies = [
         genre: ["animation"],
         year: 1942,
         language: "english",
-        imageURL: "https://en.wikipedia.org/wiki/Fox_Pop#/media/File:Merrie_Melodies_-_Fox_Pop_(1942)_-_Lobby_Card.jpg",
+        imageURL: "images/posters/1942-fox-pop.webp",
         source: "https://en.wikipedia.org/wiki/File:Chuck_Jones_-_Merrie_Melodies_-_Fox_Pop_(1942)_(restored_HD_version)_(2).webm"
     },
     {
@@ -133,7 +149,7 @@ const movies = [
         genre: ["animation"],
         year: 1942,
         language: "english",
-        imageURL: "https://en.wikipedia.org/wiki/The_Wabbit_Who_Came_to_Supper#/media/File:Wabbitwhocametosupper.jpg",
+        imageURL: "images/posters/1942-the-wabbit-who-came-to-supper.webp",
         source: "https://www.youtube.com/watch?v=NmrBmzt0kvE"
     },
     {
@@ -141,7 +157,7 @@ const movies = [
         genre: ["animation"],
         year: 1942,
         language: "english",
-        imageURL: "https://en.wikipedia.org/wiki/The_Ducktators#/media/File:The_Ducktators_title_card_representing_the_word_%22Dictators%22_2014-02-15_20-28.jpg",
+        imageURL: "images/posters/1942-the-ducktators.webp",
         source: "https://en.wikipedia.org/wiki/File:The_Ducktators_190611_LTGC.webm"
     },
     {
@@ -149,7 +165,7 @@ const movies = [
         genre: ["animation"],
         year: 1941,
         language: "english",
-        imageURL: "https://en.wikipedia.org/wiki/Pantry_Panic#/media/File:Pantrypanic_TITLE.jpg",
+        imageURL: "images/posters/1941-pantry-panic.webp",
         source: "https://en.wikipedia.org/wiki/File:Pantry_Panic.webm"
     },
     {
@@ -157,23 +173,15 @@ const movies = [
         genre: ["animation"],
         year: 1936,
         language: "english",
-        imageURL: "https://en.wikipedia.org/wiki/To_Spring#/media/File:To_Spring_Title_Card.png",
+        imageURL: "images/posters/1936-the-spring.webp",
         source: "https://en.wikipedia.org/wiki/File:To_Spring_(1936).webm"
-    },
-    {
-        movieTitle: "Jerky Turkey",
-        genre: ["animation"],
-        year: 1945,
-        language: "english",
-        imageURL: "https://en.wikipedia.org/wiki/Jerky_Turkey#/media/File:Jerky_Turkey_(1945)_-_Poster.jpg",
-        source: "https://www.youtube.com/watch?v=MJ_EDzA6yJk"
     },
     {
         movieTitle: "Superman - Jungle Drums",
         genre: ["animation"],
         year: 1943,
         language: "english",
-        imageURL: "https://en.wikipedia.org/wiki/Jungle_Drums#/media/File:Jungledrums1.JPG",
+        imageURL: "images/posters/1943-jungle-drums.webp",
         source: "https://www.youtube.com/watch?v=n2LUJQgfhcI"
     },
 ];
