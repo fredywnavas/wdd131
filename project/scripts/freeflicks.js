@@ -13,6 +13,19 @@ menuButton.addEventListener("click", () => {
     }
 });
 
+document.querySelectorAll('#main-nav a').forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    const genre = e.target.dataset.genre;
+
+    const filtered = genre === 'All'
+      ? movies
+      : movies.filter(movie => movie.genre.includes(genre));
+
+    displayMovies(filtered);
+  });
+});
+
 // Dark / Light Mode Theme TOGGLE. ##### localStorage
 if (localStorage.getItem('theme') === 'dark') {
     document.body.classList.add('dark');
@@ -46,7 +59,7 @@ ARRAY OF MOVIES
 const movies = [
     {
         movieTitle: "Mr. Bug Goes To Town",
-        genre: ["animation"],
+        genre: ["Animation"],
         year: 1941,
         language: "english",
         imageURL: "images/posters/1941-mr-bug-goes-to-town.webp",
@@ -54,7 +67,7 @@ const movies = [
     },
     {
         movieTitle: "The Hitch-Hiker",
-        genre: ["thriller"],
+        genre: ["Thriller", "Horror"],
         year: 1953,
         language: "english",
         imageURL: "images/posters/1953-the-hitch-hiker.webp",
@@ -62,7 +75,7 @@ const movies = [
     },
     {
         movieTitle: "Fantastic Planet",
-        genre: ["scifi", "animation"],
+        genre: ["Sci-Fi", "Animation"],
         year: 1973,
         language: "english",
         imageURL: "images/posters/1973-fantastic-planet.webp",
@@ -70,7 +83,7 @@ const movies = [
     },
     {
         movieTitle: "The Last Man on Earth",
-        genre: ["scifi", "horror"],
+        genre: ["Sci-Fi", "Horror"],
         year: 1964,
         language: "english",
         imageURL: "images/posters/1964-the-last-man-on-earth.webp",
@@ -78,7 +91,7 @@ const movies = [
     },
     {
         movieTitle: "Charade",
-        genre: ["comedy", "romantic"],
+        genre: ["Comedy", "Romantic"],
         year: 1963,
         language: "english",
         imageURL: "images/posters/1963-charade.webp",
@@ -86,7 +99,7 @@ const movies = [
     },
     {
         movieTitle: "The Little Shop of Horrors",
-        genre: ["comedy", "horror"],
+        genre: ["Comedy", "Horror"],
         year: 1960,
         language: "english",
         imageURL: "images/posters/1960-little-shop.webp",
@@ -94,7 +107,7 @@ const movies = [
     },
     {
         movieTitle: "Teenagers from Outer Space",
-        genre: ["scifi"],
+        genre: ["Sci-Fi"],
         year: 1959,
         language: "english",
         imageURL: "images/posters/1959-teenagers-from-outer-space.webp",
@@ -102,7 +115,7 @@ const movies = [
     },
     {
         movieTitle: "Jack and the Beanstalk",
-        genre: ["comedy", "fantasy"],
+        genre: ["Comedy", "Fantasy"],
         year: 1952,
         language: "english",
         imageURL: "images/posters/1952-jack-and-the-beanstalk.webp",
@@ -110,7 +123,7 @@ const movies = [
     },
     {
         movieTitle: "Vengeance Valley",
-        genre: ["drama", "western"],
+        genre: ["Drama", "Western"],
         year: 1951,
         language: "english",
         imageURL: "images/posters/1951-vengeance-valley.webp",
@@ -118,7 +131,7 @@ const movies = [
     },
     {
         movieTitle: "Cyrano de Bergerac",
-        genre: ["comedy", "adventure"],
+        genre: ["Comedy", "Adventure"],
         year: 1950,
         language: "english",
         imageURL: "images/posters/1950-cyrano-de-bergerac.webp",
@@ -126,7 +139,7 @@ const movies = [
     },
     {
         movieTitle: "Jerky Turkey",
-        genre: ["animation"],
+        genre: ["Animation"],
         year: 1945,
         language: "english",
         imageURL: "images/posters/1945-jerky-turkey.webp",
@@ -134,7 +147,7 @@ const movies = [
     },
     {
         movieTitle: "Pigs in a Polka",
-        genre: ["animation"],
+        genre: ["Animation"],
         year: 1943,
         language: "english",
         imageURL: "images/posters/1943-pigs-in-a-polka.webp",
@@ -142,7 +155,7 @@ const movies = [
     },
     {
         movieTitle: "A Tale of Two Kitties",
-        genre: ["animation"],
+        genre: ["Animation"],
         year: 1942,
         language: "english",
         imageURL: "images/posters/1942-a-tale-of-two-kitties.webp",
@@ -150,7 +163,7 @@ const movies = [
     },
     {
         movieTitle: "The Dover Boys at Pimento University",
-        genre: ["animation"],
+        genre: ["Animation"],
         year: 1942,
         language: "english",
         imageURL: "images/posters/1942-the-dover-boys-at-pimento-university.webp",
@@ -158,7 +171,7 @@ const movies = [
     },
     {
         movieTitle: "Fox Pop",
-        genre: ["animation"],
+        genre: ["Animation"],
         year: 1942,
         language: "english",
         imageURL: "images/posters/1942-fox-pop.webp",
@@ -166,7 +179,7 @@ const movies = [
     },
     {
         movieTitle: "The Wabbit Who Came To Supper",
-        genre: ["animation"],
+        genre: ["Animation"],
         year: 1942,
         language: "english",
         imageURL: "images/posters/1942-the-wabbit-who-came-to-supper.webp",
@@ -174,7 +187,7 @@ const movies = [
     },
     {
         movieTitle: "The Ducktators",
-        genre: ["animation"],
+        genre: ["Animation"],
         year: 1942,
         language: "english",
         imageURL: "images/posters/1942-the-ducktators.webp",
@@ -182,7 +195,7 @@ const movies = [
     },
     {
         movieTitle: "Pantry Panic",
-        genre: ["animation"],
+        genre: ["Animation"],
         year: 1941,
         language: "english",
         imageURL: "images/posters/1941-pantry-panic.webp",
@@ -190,7 +203,7 @@ const movies = [
     },
     {
         movieTitle: "The Spring",
-        genre: ["animation"],
+        genre: ["Animation"],
         year: 1936,
         language: "english",
         imageURL: "images/posters/1936-the-spring.webp",
@@ -198,7 +211,7 @@ const movies = [
     },
     {
         movieTitle: "Superman - Jungle Drums",
-        genre: ["animation"],
+        genre: ["Animation"],
         year: 1943,
         language: "english",
         imageURL: "images/posters/1943-jungle-drums.webp",

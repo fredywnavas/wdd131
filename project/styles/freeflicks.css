@@ -22,6 +22,9 @@ h1 {
     font-size: 3rem;
 }
 
+#main-nav {
+    margin-bottom: 3rem;
+}
 
 nav {
     display: none;
@@ -65,11 +68,23 @@ Also make the cards zoom in effect when hovering over with the mouse
     gap: 0.2rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
+    position: relative;
+}
+
+.movie-card p {
+    margin: 0;
+    padding: 0 0.5rem;
+}
+
+.movie-card h3 {
+    margin: 0;
+    padding: 0.5rem 0.5rem 0;
 }
 
 .movie-card:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    z-index: 1;
 }
 
 .movie-card img {
