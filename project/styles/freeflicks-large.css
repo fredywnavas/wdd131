@@ -18,11 +18,10 @@
   h1 {
     font-size: 4rem;
   }
-}
 
-/*
-HAMBURGER MENU
-*/
+  /*
+  HAMBURGER MENU
+  */
 
   .hamburger {
     display: none;
@@ -39,3 +38,4 @@ HAMBURGER MENU
   #link-nav li {
     display: inline;
   }
+}

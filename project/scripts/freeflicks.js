@@ -15,6 +15,18 @@ menuButton.addEventListener("click", () => {
 });
 ~~~ */
 
+// MOBILE VIEW HAMBURGER BUTTON
+const hamburger = document.querySelector('.hamburger');
+const linkNavList = document.querySelector('#link-nav ul');
+
+hamburger.addEventListener('click', () => {
+    linkNavList.classList.toggle('open');
+});
+
+
+
+
+
 document.querySelectorAll('#main-nav a').forEach(link => {
   link.addEventListener('click', (e) => {
     e.preventDefault();
