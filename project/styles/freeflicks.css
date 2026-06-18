@@ -28,6 +28,23 @@ nav a {
     background-color: #4a4a4a;
 }
 
+/*hamburger menu*/
+.hamburger {
+    display: block;
+}
+
+#link-nav ul {
+    display: none;
+}
+
+#link-nav ul.open {
+    display: block;
+}
+
+#link-nav li {
+    display: block;
+}
+
 
 
 /*--------------------------------*/

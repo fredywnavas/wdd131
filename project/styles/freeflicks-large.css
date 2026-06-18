@@ -19,3 +19,23 @@
     font-size: 4rem;
   }
 }
+
+/*
+HAMBURGER MENU
+*/
+
+  .hamburger {
+    display: none;
+  }
+
+  #link-nav {
+    text-align: center;
+  }
+
+  #link-nav ul {
+    display: inline;
+  }
+
+  #link-nav li {
+    display: inline;
+  }
