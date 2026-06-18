@@ -1,8 +1,9 @@
 // DOM SELECTTORS AND EVENT LISTENERS
-const menuButton = document.querySelector("#menu-button");
-const nav = document.querySelector("nav");
+//~~ const menuButton = document.querySelector("#menu-button");
+//~~ const nav = document.querySelector("nav");
 const themeToggle = document.querySelector('#theme-toggle');
 
+/* ~~~
 menuButton.addEventListener("click", () => {
     nav.classList.toggle("open");
 
@@ -12,6 +13,7 @@ menuButton.addEventListener("click", () => {
         menuButton.textContent = "☰";
     }
 });
+~~~ */
 
 document.querySelectorAll('#main-nav a').forEach(link => {
   link.addEventListener('click', (e) => {
