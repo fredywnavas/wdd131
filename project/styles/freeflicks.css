@@ -24,19 +24,42 @@ header img {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+    margin-bottom: 0;
 }
 
 h1 {
     font-size: 2.5rem;
+    margin-bottom: 0;
 }
 
 .tagline {
     font-size: 1.2rem;
+    margin-top: 0;
 }
 
 #main-nav {
     margin-bottom: 3rem;
+    display: flex;
+    gap: 2rem;
 }
+
+
+/*Hilight menu when hover over*/
+#main-nav a:hover {
+    color: #f1f1f1;
+    background-color: #4a4a4a;
+    border-radius: 4px;
+    padding: 0.3rem 0.6rem;
+}
+
+/*Keep Hilighted the active one*/
+#main-nav a.active {
+    color: #f1f1f1;
+    background-color: #4a4a4a;
+    border-radius: 4px;
+    padding: 0.3rem 0.6rem;
+}
+
 
 nav {
     display: none;
@@ -47,13 +70,16 @@ nav.open {
 }
 
 
-
 /*
 THEME TOGGLE, default is light mode, so this is to turn dark mode on.
 */
 body.dark {
     background-color: #111111;
     color: #aca66a;
+}
+
+body.dark #main-nav a {
+    color: #dfdfc4;
 }
 
 /*Hover over show in dark mode changed to light, kind of like a glow effect*/

@@ -16,8 +16,12 @@ menuButton.addEventListener("click", () => {
 document.querySelectorAll('#main-nav a').forEach(link => {
   link.addEventListener('click', (e) => {
     e.preventDefault();
-    const genre = e.target.dataset.genre;
 
+    // remove active from all links and add clicked one
+    document.querySelectorAll('#main-nav a').forEach(link => link.classList.remove('active'));
+    e.target.classList.add('active');
+
+    const genre = e.target.dataset.genre;
     const filtered = genre === 'All'
       ? movies
       : movies.filter(movie => movie.genre.includes(genre));
