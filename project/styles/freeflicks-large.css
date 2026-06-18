@@ -10,4 +10,12 @@
   .header-brand {
     flex-direction: row;
   }
+
+  header img {
+    width: 250px;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
 }

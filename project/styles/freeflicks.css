@@ -1,7 +1,11 @@
 body {
     font-family: futura, sans-serif;
-    background-color: #ffffff;
-    color: #111111;
+    background-color: #dfdfc4;
+    color: #454034;
+}
+
+.hidden {
+    display: none;
 }
 
 header {
@@ -9,6 +13,10 @@ header {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+}
+
+header img {
+    width: 200px;
 }
 
 .header-brand {
@@ -19,7 +27,11 @@ header {
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
+}
+
+.tagline {
+    font-size: 1.2rem;
 }
 
 #main-nav {
@@ -41,7 +53,7 @@ THEME TOGGLE, default is light mode, so this is to turn dark mode on.
 */
 body.dark {
     background-color: #111111;
-    color: #f1f1f1;
+    color: #aca66a;
 }
 
 /*Hover over show in dark mode changed to light, kind of like a glow effect*/
@@ -100,6 +112,3 @@ footer {
     text-align: center;
     font-family: monospace;
 }
-
-
-
