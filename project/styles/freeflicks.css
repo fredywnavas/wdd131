@@ -1,7 +1,40 @@
+/*
+NAVIGATION MENU RULES
+*/
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav li {
+    display: inline;
+    padding: 1.5%;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+#link-nav a {
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    font-size: x-large;
+    color: #282621;
+}
+
+#link-nav a:hover {
+    color: #f1f1f1;
+    background-color: #4a4a4a;
+}
+
+
+
+/*--------------------------------*/
 body {
     font-family: futura, sans-serif;
     background-color: #dfdfc4;
-    color: #454034;
+    color: #282621;
 }
 
 .hidden {
@@ -44,11 +77,18 @@ h1 {
     margin-bottom: 3rem;
 }
 
+/*--------------------------------*/
+
+
+
+/*FILTERING MENU IN MAIN PAGE*/
+
 /*Hilight menu when hover over, keep highlighted the active one*/
 
 #main-nav a {
     padding: 0.3rem 0.6rem;
     border-radius: 4px;
+    color: #282621;
 }
 
 #main-nav a:hover {
@@ -71,6 +111,7 @@ nav.open {
 }
 
 
+/*--------------------------------*/
 
 
 
@@ -105,15 +146,18 @@ body.dark #main-nav a {
     color: #dfdfc4;
 }
 
+/*Color on LINK menu in dark mode*/
+
+body.dark #link-nav a {
+    color: #dfdfc4;
+}
+
 /*Hover over show in dark mode changed to light, kind of like a glow effect*/
 body.dark .movie-card:hover {
     box-shadow: 0 8px 20px rgba(255, 255, 255, 0.15);
 }
 
-
-
-
-
+/*--------------------------------*/
 
 
 
@@ -126,8 +170,13 @@ display grid instead of vertical list
     gap: 2rem;
 }
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
 
-
+/*--------------------------------*/
 
 
 
@@ -165,6 +214,10 @@ Also make the cards zoom in effect when hovering over with the mouse
     height: 300;
     object-fit: cover;
 }
+
+/*--------------------------------*/
+
+
 
 /*
 FOOTER CONTENT
