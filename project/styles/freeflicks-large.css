@@ -1,3 +1,13 @@
-h1 {
-    font-family: futura, sans-serif;
+@media (min-width: 768px) {
+  nav {
+    display: block;
+  }
+
+  #menu-button {
+    display: none;
+  }
+
+  .header-brand {
+    flex-direction: row;
+  }
 }

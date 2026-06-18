@@ -3,6 +3,36 @@ body {
     background-color: #ffffff;
     color: #111111;
 }
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+
+nav {
+    display: none;
+}
+
+nav.open {
+    display: block;
+}
+
+
+
 /*
 THEME TOGGLE, default is light mode, so this is to turn dark mode on.
 */
@@ -26,30 +56,26 @@ display grid instead of vertical list
 }
 
 /*
-each card to stack content inside
+Each card to stack content inside
+Also make the cards zoom in effect when hovering over with the mouse
 */
 .movie-card {
     display: flex;
     flex-direction: column;
     gap: 0.2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 .movie-card img {
     width: 100%;
     height: 300;
     object-fit: cover;
-}
-
-/*
-make the cards zoom in effect when hovering over with the mouse
-*/
-.movie-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-}
-.movie-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 /*
