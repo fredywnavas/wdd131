@@ -229,7 +229,7 @@ Also make the cards zoom in effect when hovering over with the mouse
 
 .movie-card img {
     width: 100%;
-    height: 300;
+    height: 300px;
     object-fit: cover;
 }
 
