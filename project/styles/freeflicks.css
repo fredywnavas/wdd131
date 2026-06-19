@@ -47,7 +47,9 @@ nav a {
 
 
 
-/*--------------------------------*/
+/*--------------------------------
+/ / / / / /   B O D Y / / / / / / /
+--------------------------------*/
 body {
     font-family: futura, sans-serif;
     background-color: #dfdfc4;
@@ -78,7 +80,7 @@ header img {
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 0;
 }
 
@@ -233,6 +235,36 @@ Also make the cards zoom in effect when hovering over with the mouse
 
 /*--------------------------------*/
 
+/*
+SUGGESTIONS.HTML
+*/
+.suggestion-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #c9c9a5;
+    text-align: center;
+}
+
+/*suggestion form in dark mode*/
+body.dark .suggestion-form {
+    background-color: #282621;
+}
+
+.form-row {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.form-row label{
+    width: 150px;
+}
+
+
+/*--------------------------------*/
+
 
 
 /*
@@ -241,4 +273,6 @@ FOOTER CONTENT
 footer {
     text-align: center;
     font-family: monospace;
+    position: static;
+    bottom: 0;
 }
