@@ -276,3 +276,16 @@ footer {
     position: static;
     bottom: 0;
 }
+
+
+/*---------------------------------------
+contact.html SOCIAL MEDIA LINKS AND ICONS
+---------------------------------------*/
+.social-links {
+    text-align: center;
+}
+
+.social-links i {
+    font-size: 3rem;
+    color: #282621;
+}
